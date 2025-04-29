@@ -4,7 +4,7 @@ import asyncio
 import aiogram
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import ReplyKeyboardRemove, \
-    ReplyKeyboardMarkugh auth loginp, KeyboardButton, \
+    ReplyKeyboardMarkugh, KeyboardButton, \
     InlineKeyboardMarkup, InlineKeyboardButton
 from base import SQL# подключение класса SQLighter из файла base
 from aiogram.types import FSInputFile
