@@ -8,9 +8,11 @@ from aiogram.types import ReplyKeyboardRemove, \
     InlineKeyboardMarkup, InlineKeyboardButton
 from base import SQL# подключение класса SQLighter из файла base
 from aiogram.types import FSInputFile
+from aiogram.client.session.aiohttp import AiohttpSession
 
 db = SQL('db.db')  # соединение с БД
-bot = Bot(token=config.TOKEN)
+session = AiohttpSession(proxy='http://proxy.server:3128') # в proxy указан прокси сервер pythonanywhere, он нужен для подключения
+bot = Bot(token=config.TOKEN, session=session)
 dp = Dispatcher()
 logging.basicConfig(level=logging.INFO)
 
